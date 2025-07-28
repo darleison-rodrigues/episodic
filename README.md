@@ -41,21 +41,59 @@ python episodic.py build <path_to_logs_directory>
 python episodic.py build .
 ```
 
-### 2. Search Your Memory (Future)
+### 2. Search Your Memory
 
 This command will allow you to perform powerful searches over your entire interaction history.
 
 ```bash
-# To be implemented
 python episodic.py search "your query here"
+```
+
+**Example:**
+```bash
+python episodic.py search "knowledge graph"
+```
+
+### 3. Generate Embeddings
+
+This command generates and stores vector embeddings for your messages, enabling semantic search.
+
+```bash
+python episodic.py embed
+```
+
+### 4. Build Lexicon
+
+This command builds a lexicon (word frequencies) from your messages.
+
+```bash
+python episodic.py lexicon build
+```
+
+### 5. Search Lexicon
+
+This command searches the lexicon for a specific word.
+
+```bash
+python episodic.py lexicon search <word>
+```
+
+**Example:**
+```bash
+python episodic.py lexicon search "python"
 ```
 
 ## Roadmap
 
 - [X] **Project Scoping & README:** Define the vision and architecture.
-- [ ] **Initial Script (`episodic.py`):** Create the core Python script with CLI argument parsing.
-- [ ] **SQLite Backend:** Implement the database creation and schema.
-- [ ] **Implement `build` command:** Create the logic to scan, parse, and incrementally add log entries to the database.
-- [ ] **Implement `search` command:** Add basic keyword search functionality.
-- [ ] **Embeddings:** Generate and store vector embeddings for each memory entry.
-- [ ] **Semantic Search:** Implement a true semantic search using vector similarity.
+- [X] **Initial Script (`episodic.py`):** Create the core Python script with CLI argument parsing.
+- [X] **SQLite Backend:** Implement the database creation and schema.
+- [X] **Implement `build` command:** Create the logic to scan, parse, and incrementally add log entries to the database.
+- [X] **Implement `search` command:** Add basic keyword search functionality.
+- [X] **Embeddings:** Generate and store vector embeddings for each memory entry.
+- [X] **Semantic Search:** Implement a true semantic search using vector similarity.
+- [X] **Lexicon Builder:** Implement a lexicon builder with word frequency counting.
+- [ ] **Knowledge Graph Builder:** Implement a knowledge graph builder.
+- [ ] **Agent Interface:** Create an agent interface.
+- [ ] **WebAssembly (WASM) Integration:** Explore WASM for client-side performance.
+- [ ] **Websocket Communication:** Implement websocket communication for teams.
